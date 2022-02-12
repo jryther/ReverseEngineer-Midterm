@@ -1,0 +1,71 @@
+<+0>:     push   %rbp
+<+1>:     mov    %rsp,%rbp
+<+4>:     push   %rbx
+<+5>:     sub    $0x48,%rsp
+<+9>:     mov    %fs:0x28,%rax
+<+18>:    mov    %rax,-0x18(%rbp)
+<+22>:    xor    %eax,%eax
+<+24>:    lea    -0x45(%rbp),%rax
+<+28>:    mov    %rax,%rdi
+<+31>:    callq  0xd20 <_ZNSaIcEC1Ev@plt> #<std::allocator<char>::allocator()@plt>
+<+36>:    lea    -0x45(%rbp),%rdx
+<+40>:    lea    -0x40(%rbp),%rax
+<+44>:    lea    0x588(%rip),%rsi        # 0x1525 "" Empty string
+<+51>:    mov    %rax,%rdi
+<+54>:    callq  0xce0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_@plt>
+<+59>:    lea    -0x45(%rbp),%rax
+<+63>:    mov    %rax,%rdi
+<+66>:    callq  0xcb0 <_ZNSaIcED1Ev@plt> <std::allocator<char>::~allocator()@plt>
+<+71>:    movl   $0x0,-0x44(%rbp)
+<+78>:    lea    0x567(%rip),%rsi        # 0x1526 "Enter your username: \n"
+<+85>:    lea    0x2010da(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+92>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+97>:    lea    0x20130e(%rip),%rsi        # 0x2022e0 <username>
+<+104>:   lea    0x2011e7(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>
+<+111>:   callq  0xc40 <_ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_PS3_@plt>
+
+<+116>:   lea    0x558(%rip),%rsi        # 0x153d "Enter your password: \n"
+<+123>:   lea    0x2010b4(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+130>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+135>:   lea    -0x40(%rbp),%rax
+<+139>:   mov    %rax,%rsi
+<+142>:   lea    0x2011c1(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>
+<+149>:   callq  0xcd0 cd0 <std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)@plt> <_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE@plt>
+
+<+154>:   lea    -0x40(%rbp),%rax
+<+158>:   lea    0x545(%rip),%rsi        # 0x1554  123
+<+165>:   mov    %rax,%rdi
+<+168>:   callq  0xc50 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const@plt> <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc@plt>
+<+173>:   mov    %eax,-0x44(%rbp)
+<+176>:   cmpl   $0x0,-0x44(%rbp)
+<+180>:   jne    0x1027 <_Z25CheckUserPermissionAccessv+189> # Jump if the password entered is not equal to 123
+<+182>:   mov    $0x1,%ebx
+<+187>:   jmp    0x102c <_Z25CheckUserPermissionAccessv+194> # Jumps by default if the password is equal
+<+189>:   mov    $0x2,%ebx
+<+194>:   lea    -0x40(%rbp),%rax
+<+198>:   mov    %rax,%rdi
+<+201>:   callq  0xc70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@plt> std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+<+206>:   mov    %ebx,%eax
+<+208>:   mov    -0x18(%rbp),%rcx
+<+212>:   xor    %fs:0x28,%rcx
+<+221>:   je     0x1084 <_Z25CheckUserPermissionAccessv+282>
+<+223>:   jmp    0x107f <_Z25CheckUserPermissionAccessv+277>
+<+225>:   mov    %rax,%rbx
+<+228>:   lea    -0x45(%rbp),%rax
+<+232>:   mov    %rax,%rdi
+<+235>:   callq  0xcb0 <_ZNSaIcED1Ev@plt> <std::allocator<char>::~allocator()@plt>
+<+240>:   mov    %rbx,%rax
+<+243>:   mov    %rax,%rdi
+<+246>:   callq  0xd10 <_Unwind_Resume@plt>
+<+251>:   mov    %rax,%rbx
+<+254>:   lea    -0x40(%rbp),%rax
+<+258>:   mov    %rax,%rdi
+<+261>:   callq  0xc70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@plt> <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+<+266>:   mov    %rbx,%rax
+<+269>:   mov    %rax,%rdi
+<+272>:   callq  0xd10 <_Unwind_Resume@plt>
+<+277>:   callq  0xcc0 <__stack_chk_fail@plt>
+<+282>:   add    $0x48,%rsp
+<+286>:   pop    %rbx
+<+287>:   pop    %rbp
+<+288>:   retq  

@@ -1,0 +1,64 @@
+<+0>:     push   %rbp
+<+1>:     mov    %rsp,%rbp
+<+4>:     lea    0x5eb(%rip),%rsi        # 0x1440 "Hello! Welcome to our Investment Company\n"
+<+11>:    lea    0x201244(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+18>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+
+<+23>:    callq  0xf6a <_Z25CheckUserPermissionAccessv>
+<+28>:    mov    %eax,0x201494(%rip)        # 0x202300 <answer> ""
+<+34>:    mov    0x20148e(%rip),%eax        # 0x202300 <answer>
+<+40>:    cmp    $0x1,%eax
+<+43>:    je     0xe8a <main+64>
+<+45>:    lea    0x5f2(%rip),%rsi        # 0x1470 "Invalid Password. Please try again\n"
+<+52>:    lea    0x20121b(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+59>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+64>:    mov    0x201470(%rip),%eax        # 0x202300 <answer> ""
+<+70>:    cmp    $0x1,%eax
+<+73>:    je     0xe97 <main+77>
+<+75>:    jmp    0xe61 <main+23>
+
+<+77>:    lea    0x5f6(%rip),%rsi        # 0x1494 "What would you like to do?\n"
+<+84>:    lea    0x2011fb(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+91>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+96>:    lea    0x5ff(%rip),%rsi        # 0x14b0 "DISPLAY the client list (enter 1)\n"
+<+103>:   lea    0x2011e8(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+110>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+115>:   lea    0x614(%rip),%rsi        # 0x14d8 "CHANGE a client's choice (enter 2)\n"
+<+122>:   lea    0x2011d5(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+129>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+134>:   lea    0x625(%rip),%rsi        # 0x14fc "Exit the program.. (enter 3)\n"
+<+141>:   lea    0x2011c2(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+148>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+153>:   lea    0x20140a(%rip),%rsi        # 0x2022f4 <choice> ""
+<+160>:   lea    0x2012cf(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>
+<+167>:   callq  0xc60 <_ZNSirsERi@plt> <std::istream::operator>>(int&)@plt>
+<+172>:   lea    0x61d(%rip),%rsi        # 0x151a "You chose "
+<+179>:   lea    0x20119c(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+186>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+191>:   mov    %rax,%rdx
+<+194>:   mov    0x2013e2(%rip),%eax        # 0x2022f4 <choice> ""
+<+200>:   mov    %eax,%esi
+<+202>:   mov    %rdx,%rdi
+<+205>:   callq  0xd00 <_ZNSolsEi@plt> <std::ostream::operator<<(int)@plt>
+<+210>:   mov    %rax,%rdx
+<+213>:   mov    0x2010aa(%rip),%rax        # 0x201fd0 ""
+<+220>:   mov    %rax,%rsi
+<+223>:   mov    %rdx,%rdi
+<+226>:   callq  0xca0 <_ZNSolsEPFRSoS_E@plt> <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+
+<+231>:   mov    0x2013bd(%rip),%eax        # 0x2022f4 <choice>
+<+237>:   cmp    $0x1,%eax
+<+240>:   jne    0xf43 <main+249>
+<+242>:   callq  0x108b <_Z11DisplayInfov>
+<+247>:   jmp    0xf53 <main+265>
+<+249>:   mov    0x2013ab(%rip),%eax        # 0x2022f4 <choice>
+<+255>:   cmp    $0x2,%eax
+<+258>:   jne    0xf53 <main+265>
+<+260>:   callq  0x1277 <_Z20ChangeCustomerChoicev>
+<+265>:   mov    0x20139b(%rip),%eax        # 0x2022f4 <choice>
+<+271>:   cmp    $0x3,%eax
+<+274>:   je     0xf63 <main+281>
+<+276>:   jmpq   0xe97 <main+77>
+<+281>:   mov    $0x0,%eax
+<+286>:   pop    %rbp
+<+287>:   retq  

@@ -1,0 +1,109 @@
+<+0>:     push   %rbp
+<+1>:     mov    %rsp,%rbp
+<+4>:     lea    0x4c2(%rip),%rsi        # 0x1558    "Client's Name    Service Selected (1 = Brokerage, 2 = Retirement)"
+<+11>:    lea    0x201003(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+18>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+
+<+23>:    mov    %rax,%rdx
+<+26>:    mov    0x200f24(%rip),%rax        # 0x201fd0 ""
+<+33>:    mov    %rax,%rsi
+<+36>:    mov    %rdx,%rdi
+<+39>:    callq  0xca0 <_ZNSolsEPFRSoS_E@plt> #std::ostream::operator<<(std::ostream& (*)(std::ostream&))
+<+44>:    lea    0x4de(%rip),%rsi        # 0x159c "1. "
+<+51>:    lea    0x200fdb(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+58>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+63>:    lea    0x200f3f(%rip),%rsi        # 0x202010 <name1>: "Bob Jones"
+<+70>:    mov    %rax,%rdi
+<+73>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+78>:    lea    0x4c0(%rip),%rsi        # 0x15a0 " selected option "
+<+85>:    mov    %rax,%rdi
+<+88>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+93>:    mov    %rax,%rdx
+<+96>:    mov    0x200f6f(%rip),%eax        # 0x202060 <num1>: "\001"
+<+102>:   mov    %eax,%esi
+<+104>:   mov    %rdx,%rdi
+<+107>:   callq  0xd00 <_ZNSolsEi@plt> #std::ostream::operator<<(int)
+<+112>:   mov    %rax,%rdx
+<+115>:   mov    0x200ecb(%rip),%rax        # 0x201fd0 ""
+<+122>:   mov    %rax,%rsi
+<+125>:   mov    %rdx,%rdi
+<+128>:   callq  0xca0 <_ZNSolsEPFRSoS_E@plt> #std::ostream::operator<<(std::ostream& (*)(std::ostream&))
+<+133>:   lea    0x49b(%rip),%rsi        # 0x15b2 "2. "
+<+140>:   lea    0x200f82(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+147>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+152>:   lea    0x200ef6(%rip),%rsi        # 0x202020 <name2>: "Sarah Davis"
+<+159>:   mov    %rax,%rdi
+<+162>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+167>:   lea    0x467(%rip),%rsi        # 0x15a0 " selected option "
+<+174>:   mov    %rax,%rdi
+<+177>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+182>:   mov    %rax,%rdx
+<+185>:   mov    0x200f1a(%rip),%eax        # 0x202064 <num2>: "\002"
+<+191>:   mov    %eax,%esi
+<+193>:   mov    %rdx,%rdi
+<+196>:   callq  0xd00 <_ZNSolsEi@plt> #std::ostream::operator<<(int)
+<+201>:   mov    %rax,%rdx
+<+204>:   mov    0x200e72(%rip),%rax        # 0x201fd0 ""
+<+211>:   mov    %rax,%rsi
+<+214>:   mov    %rdx,%rdi
+<+217>:   callq  0xca0 <_ZNSolsEPFRSoS_E@plt> #std::ostream::operator<<(std::ostream& (*)(std::ostream&))
+<+222>:   lea    0x446(%rip),%rsi        # 0x15b6 "3. "
+<+229>:   lea    0x200f29(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+236>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+241>:   lea    0x200ead(%rip),%rsi        # 0x202030 <name3>: "Amy Friendly"
+<+248>:   mov    %rax,%rdi
+<+251>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+256>:   lea    0x40e(%rip),%rsi        # 0x15a0 " selected option "
+<+263>:   mov    %rax,%rdi
+<+266>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+271>:   mov    %rax,%rdx
+<+274>:   mov    0x200ec5(%rip),%eax        # 0x202068 <num3>: "\001"
+<+280>:   mov    %eax,%esi
+<+282>:   mov    %rdx,%rdi
+<+285>:   callq  0xd00 <_ZNSolsEi@plt> #std::ostream::operator<<(int)
+<+290>:   mov    %rax,%rdx
+<+293>:   mov    0x200e19(%rip),%rax        # 0x201fd0 ""
+<+300>:   mov    %rax,%rsi
+<+303>:   mov    %rdx,%rdi
+<+306>:   callq  0xca0 <_ZNSolsEPFRSoS_E@plt> #std::ostream::operator<<(std::ostream& (*)(std::ostream&))
+<+311>:   lea    0x3f1(%rip),%rsi        # 0x15ba "4. "
+<+318>:   lea    0x200ed0(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+325>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+330>:   lea    0x200e64(%rip),%rsi        # 0x202040 <name4>: "Johnny Smith"
+<+337>:   mov    %rax,%rdi
+<+340>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+345>:   lea    0x3b5(%rip),%rsi        # 0x15a0 " selected option "
+<+352>:   mov    %rax,%rdi
+<+355>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+360>:   mov    %rax,%rdx
+<+363>:   mov    0x200e70(%rip),%eax        # 0x20206c <num4>: "\001"
+<+369>:   mov    %eax,%esi
+<+371>:   mov    %rdx,%rdi
+<+374>:   callq  0xd00 <_ZNSolsEi@plt> #std::ostream::operator<<(int)
+<+379>:   mov    %rax,%rdx
+<+382>:   mov    0x200dc0(%rip),%rax        # 0x201fd0 ""
+<+389>:   mov    %rax,%rsi
+<+392>:   mov    %rdx,%rdi
+<+395>:   callq  0xca0 <_ZNSolsEPFRSoS_E@plt> #std::ostream::operator<<(std::ostream& (*)(std::ostream&))
+<+400>:   lea    0x39c(%rip),%rsi        # 0x15be "5. "
+<+407>:   lea    0x200e77(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+414>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+419>:   lea    0x200e1b(%rip),%rsi        # 0x202050 <name5>: "Carol Spears"
+<+426>:   mov    %rax,%rdi
+<+429>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+434>:   lea    0x35c(%rip),%rsi        # 0x15a0 " selected option "
+<+441>:   mov    %rax,%rdi
+<+444>:   callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+449>:   mov    %rax,%rdx
+<+452>:   mov    0x200e1b(%rip),%eax        # 0x202070 <num5>: "\002"
+<+458>:   mov    %eax,%esi
+<+460>:   mov    %rdx,%rdi
+<+463>:   callq  0xd00 <_ZNSolsEi@plt> #std::ostream::operator<<(int)
+<+468>:   mov    %rax,%rdx
+<+471>:   mov    0x200d67(%rip),%rax        # 0x201fd0 ""
+<+478>:   mov    %rax,%rsi
+<+481>:   mov    %rdx,%rdi
+<+484>:   callq  0xca0 <_ZNSolsEPFRSoS_E@plt>  #std::ostream::operator<<(std::ostream& (*)(std::ostream&))
+<+489>:   nop
+<+490>:   pop    %rbp
+<+491>:   retq   

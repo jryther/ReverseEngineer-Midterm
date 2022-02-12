@@ -1,0 +1,48 @@
+<+0>:     push   %rbp
+<+1>:     mov    %rsp,%rbp
+<+4>:     lea    0x346(%rip),%rsi        # 0x15c8 "Enter the number of the client that you wish to change\n"
+<+11>:    lea    0x200e17(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+18>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+23>:    lea    0x201063(%rip),%rsi        # 0x2022f8 <changechoice> ""
+<+30>:    lea    0x200f24(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>
+<+37>:    callq  0xc60 <_ZNSirsERi@plt> <std::istream::operator>>(int&)@plt>
+
+<+42>:    lea    0x358(%rip),%rsi        # 0x1600 "Please enter the client's new service choice (1 = Brokerage, 2 = Retirement)\n"
+<+49>:    lea    0x200df1(%rip),%rdi        # 0x2020a0 <_ZSt4cout@@GLIBCXX_3.4>
+<+56>:    callq  0xc90 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+<+61>:    lea    0x201041(%rip),%rsi        # 0x2022fc <newservice> ""
+<+68>:    lea    0x200efe(%rip),%rdi        # 0x2021c0 <_ZSt3cin@@GLIBCXX_3.4>
+<+75>:    callq  0xc60 <_ZNSirsERi@plt> <std::istream::operator>>(int&)@plt>
+
+<+80>:    mov    0x20102b(%rip),%eax        # 0x2022f8 <changechoice> ""
+<+86>:    cmp    $0x1,%eax
+<+89>:    jne    0x12e0 <_Z20ChangeCustomerChoicev+105>
+<+91>:    mov    0x201024(%rip),%eax        # 0x2022fc <newservice> ""
+<+97>:    mov    %eax,0x200d82(%rip)        # 0x202060 <num1> "\001"
+<+103>:   jmp    0x1342 <_Z20ChangeCustomerChoicev+203>
+<+105>:   mov    0x201012(%rip),%eax        # 0x2022f8 <changechoice> ""
+<+111>:   cmp    $0x2,%eax
+<+114>:   jne    0x12f9 <_Z20ChangeCustomerChoicev+130>
+<+116>:   mov    0x20100b(%rip),%eax        # 0x2022fc <newservice> ""
+<+122>:   mov    %eax,0x200d6d(%rip)        # 0x202064 <num2> "\002"
+<+128>:   jmp    0x1342 <_Z20ChangeCustomerChoicev+203>
+<+130>:   mov    0x200ff9(%rip),%eax        # 0x2022f8 <changechoice> ""
+<+136>:   cmp    $0x3,%eax
+<+139>:   jne    0x1312 <_Z20ChangeCustomerChoicev+155>
+<+141>:   mov    0x200ff2(%rip),%eax        # 0x2022fc <newservice> ""
+<+147>:   mov    %eax,0x200d58(%rip)        # 0x202068 <num3> "\001"
+<+153>:   jmp    0x1342 <_Z20ChangeCustomerChoicev+203>
+<+155>:   mov    0x200fe0(%rip),%eax        # 0x2022f8 <changechoice> ""
+<+161>:   cmp    $0x4,%eax
+<+164>:   jne    0x132b <_Z20ChangeCustomerChoicev+180>
+<+166>:   mov    0x200fd9(%rip),%eax        # 0x2022fc <newservice> ""
+<+172>:   mov    %eax,0x200d43(%rip)        # 0x20206c <num4> "\001"
+<+178>:   jmp    0x1342 <_Z20ChangeCustomerChoicev+203>
+<+180>:   mov    0x200fc7(%rip),%eax        # 0x2022f8 <changechoice> ""
+<+186>:   cmp    $0x5,%eax
+<+189>:   jne    0x1342 <_Z20ChangeCustomerChoicev+203>
+<+191>:   mov    0x200fc0(%rip),%eax        # 0x2022fc <newservice> ""
+<+197>:   mov    %eax,0x200d2e(%rip)        # 0x202070 <num5> "\002"
+<+203>:   nop
+<+204>:   pop    %rbp
+<+205>:   retq  
